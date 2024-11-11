@@ -1,5 +1,19 @@
 function validatePIN(pin) {
   //Start coding here
+
+  let answer = false;
+  console.log(Number(pin));
+  console.log(pin);
+
+  if (pin.length === 4 || (pin.length === 6 && !isNaN(pin))) {
+    answer = true;
+  } else if (Number(pin) === NaN) {
+    console.log(pin);
+    console.log(Number(pin));
+    answer = false;
+  }
+
+  return (pin.length === 4 || pin.length === 6) && !isNaN(pin);
 }
 
 let result1 = validatePIN("1234");

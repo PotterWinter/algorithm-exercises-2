@@ -1,5 +1,20 @@
 function fizzBuzz(n) {
   //Start coding here
+  let answer = [];
+  for (let i = 1; i <= n; i++) {
+    toString(answer.push(i));
+    if (i % 15 === 0) {
+      answer.splice(-1);
+      answer.push("FizzBuzz");
+    } else if (i % 5 === 0) {
+      answer.splice(-1);
+      answer.push("Buzz");
+    } else if (i % 3 === 0) {
+      answer.splice(-1);
+      answer.push("Fizz");
+    }
+  }
+  return answer;
 }
 
 let result1 = fizzBuzz(3);
